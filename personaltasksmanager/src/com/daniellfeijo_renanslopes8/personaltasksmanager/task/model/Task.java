@@ -18,7 +18,7 @@ public class Task {
 	private boolean finished;
 	
 	@DateTimeFormat(pattern="yyyy-MM-dd")
-	private Calendar FinishedDate;
+	private Calendar finishedDate;
 
 	public Long getId() {
 		return id;
@@ -45,11 +45,11 @@ public class Task {
 	}
 
 	public Calendar getFinishedDate() {
-		return FinishedDate;
+		return finishedDate;
 	}
 
 	public void setFinishedDate(Calendar finishedDate) {
-		FinishedDate = finishedDate;
+		this.finishedDate = finishedDate;
 	}
 
 }
