@@ -1,4 +1,4 @@
-package com.daniellfeijo_renanslopes8.personaltasksmanager.model;
+package com.daniellfeijo_renanslopes8.personaltasksmanager.task.model;
 
 import java.util.Calendar;
 

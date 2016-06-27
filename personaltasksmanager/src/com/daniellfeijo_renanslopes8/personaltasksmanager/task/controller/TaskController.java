@@ -9,8 +9,8 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.daniellfeijo_renanslopes8.personaltasksmanager.model.Task;
 import com.daniellfeijo_renanslopes8.personaltasksmanager.task.dao.JdbcTaskDao;
+import com.daniellfeijo_renanslopes8.personaltasksmanager.task.model.Task;
 
 @Controller
 public class TaskController {

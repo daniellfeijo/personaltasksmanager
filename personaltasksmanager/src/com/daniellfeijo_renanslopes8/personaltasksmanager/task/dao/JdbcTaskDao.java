@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import com.daniellfeijo_renanslopes8.personaltasksmanager.model.Task;
+import com.daniellfeijo_renanslopes8.personaltasksmanager.task.model.Task;
 import com.daniellfeijo_renanslopes8.personaltasksmanager.util.ConnectionFactory;
 
 
