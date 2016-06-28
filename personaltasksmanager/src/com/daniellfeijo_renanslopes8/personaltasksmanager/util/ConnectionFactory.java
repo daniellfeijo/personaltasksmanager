@@ -16,7 +16,7 @@ public class ConnectionFactory {
 		}
 
 		return DriverManager.getConnection("jdbc:mysql://localhost/personaltasksmanager",
-				"root", "@root@");
+				"root", "@!Uv9RuQz2!@");
 	}
 
 }
