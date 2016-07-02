@@ -9,17 +9,22 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+import javax.inject.Inject;
+import javax.sql.DataSource;
+
+import org.springframework.stereotype.Repository;
+
 import com.daniellfeijo_renanslopes8.personaltasksmanager.task.model.Task;
-import com.daniellfeijo_renanslopes8.personaltasksmanager.util.ConnectionFactory;
 
-
+@Repository
 public class JdbcTaskDao {
 	private final Connection connection;
 
-	public JdbcTaskDao() {
+	@Inject
+	public JdbcTaskDao(DataSource dataSource) {
 		try {
-			this.connection = new ConnectionFactory().getConnection();
-		} catch (SQLException e) {
+			this.connection = dataSource.getConnection();
+		}catch (SQLException e){
 			throw new RuntimeException(e);
 		}
 	}

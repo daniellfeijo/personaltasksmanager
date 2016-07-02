@@ -17,10 +17,10 @@
 	<mvc:annotation-driven />
 	
 	<bean id="mysqlDataSource" class="org.apache.commons.dbcp.BasicDataSource">
-		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://localhost/personaltasksmanager"/>
-		<property name="username" value="root"/>
-		<property name="password" value="@root@"/>
+		<property name="username" value="root" />
+		<property name="password" value="@!Uv9RuQz2!@" />
 	</bean>
 	
 	<bean
@@ -41,5 +41,6 @@
 	<mvc:interceptors>
 	<bean class="com.daniellfeijo_renanslopes8.personaltasksmanager.util.interceptor.AuthorizerInterceptor" />
 	</mvc:interceptors>
+	
 
 </beans>
