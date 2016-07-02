@@ -1,5 +1,6 @@
 package com.daniellfeijo_renanslopes8.personaltasksmanager.system.controller;
 
+import javax.inject.Inject;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
@@ -12,6 +13,13 @@ import com.daniellfeijo_renanslopes8.personaltasksmanager.user.model.Users;
 @Controller
 public class LoginController {
 	
+	private JdbcUserDao dao;
+	
+	@Inject
+	public LoginController(JdbcUserDao dao){
+		this.dao = dao;
+	}
+
 	@RequestMapping("loginForm")
 	public String loginForm(){
 		return "formulario-login";
@@ -20,7 +28,7 @@ public class LoginController {
 	@RequestMapping("makeLogin")
 	public String makeLogin(Users user, 
 			HttpSession session){
-		if(new JdbcUserDao().existUser(user)){
+		if(dao.existUser(user)){
 			session.setAttribute("loggedUser", user);
 			return "main";
 		}

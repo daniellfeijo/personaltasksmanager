@@ -5,16 +5,22 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.daniellfeijo_renanslopes8.personaltasksmanager.user.model.Users;
-import com.daniellfeijo_renanslopes8.personaltasksmanager.util.ConnectionFactory;
+import javax.inject.Inject;
+import javax.sql.DataSource;
 
+import org.springframework.stereotype.Repository;
+
+import com.daniellfeijo_renanslopes8.personaltasksmanager.user.model.Users;
+
+@Repository
 public class JdbcUserDao {
 	private final Connection connection;
 
-	public JdbcUserDao() {
+	@Inject
+	public JdbcUserDao(DataSource dataSource) {
 		try {
-			this.connection = new ConnectionFactory().getConnection();
-		} catch (SQLException e) {
+			this.connection = dataSource.getConnection();
+		}catch (SQLException e){
 			throw new RuntimeException(e);
 		}
 	}
