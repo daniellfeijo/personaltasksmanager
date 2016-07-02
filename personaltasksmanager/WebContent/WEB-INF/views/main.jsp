@@ -10,5 +10,6 @@
 	<h2>Start Page</h2>
 	<p>Welcome, ${loggedUser.login }</p>
 	<a href="listTasks">Cliq here</a> to access the tasks list.
+	<a href="logout">Sair do sistema</a>
 </body>
 </html>

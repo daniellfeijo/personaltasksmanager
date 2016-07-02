@@ -38,4 +38,8 @@
 	<mvc:default-servlet-handler/>
 	<tx:annotation-driven/>
 
+	<mvc:interceptors>
+	<bean class="com.daniellfeijo_renanslopes8.personaltasksmanager.util.interceptor.AuthorizerInterceptor" />
+	</mvc:interceptors>
+
 </beans>
