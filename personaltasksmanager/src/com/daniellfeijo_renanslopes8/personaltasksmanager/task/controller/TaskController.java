@@ -2,26 +2,24 @@ package com.daniellfeijo_renanslopes8.personaltasksmanager.task.controller;
 
 import java.util.List;
 
-import javax.inject.Inject;
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.daniellfeijo_renanslopes8.personaltasksmanager.task.dao.JdbcTaskDao;
+import com.daniellfeijo_renanslopes8.personaltasksmanager.task.dao.TaskDao;
 import com.daniellfeijo_renanslopes8.personaltasksmanager.task.model.Task;
 
+@Transactional
 @Controller
 public class TaskController {
 	
-	private JdbcTaskDao dao;
-	
-	@Inject
-	public TaskController(JdbcTaskDao dao){
-		this.dao = dao;
-	}
+	@Autowired
+	private TaskDao dao;
 	
 	@RequestMapping("newTask")
 	public String form(){

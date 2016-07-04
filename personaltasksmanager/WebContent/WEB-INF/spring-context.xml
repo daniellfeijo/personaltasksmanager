@@ -20,7 +20,7 @@
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://localhost/personaltasksmanager"/>
 		<property name="username" value="root" />
-		<property name="password" value="@!Uv9RuQz2!@" />
+		<property name="password" value="" />
 	</bean>
 	
 	<bean
@@ -34,9 +34,23 @@
 		"org.springframework.context.support.ReloadableResourceBundleMessageSource">
 		<property name="basename" value="/WEB-INF/messages" />
 	</bean>
-
+	
+	<bean id="entityManagerFactory" 
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="mysqlDataSource" />
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+		</property>
+	</bean>
+	
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+	
 	<mvc:default-servlet-handler/>
+
 	<tx:annotation-driven/>
+
 
 	<mvc:interceptors>
 	<bean class="com.daniellfeijo_renanslopes8.personaltasksmanager.util.interceptor.AuthorizerInterceptor" />

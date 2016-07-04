@@ -10,7 +10,7 @@ import javax.sql.DataSource;
 
 import org.springframework.stereotype.Repository;
 
-import com.daniellfeijo_renanslopes8.personaltasksmanager.user.model.Users;
+import com.daniellfeijo_renanslopes8.personaltasksmanager.user.model.User;
 
 @Repository
 public class JdbcUserDao {
@@ -26,7 +26,7 @@ public class JdbcUserDao {
 	}
 
 	
-	public boolean existUser(Users user) {
+	public boolean existUser(User user) {
 		try {
 			PreparedStatement stmt = this.connection
 					.prepareStatement("select * from users where login = ? and password = ?");

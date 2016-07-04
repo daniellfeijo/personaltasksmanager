@@ -1,32 +1,30 @@
 package com.daniellfeijo_renanslopes8.personaltasksmanager.system.controller;
 
-import javax.inject.Inject;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.daniellfeijo_renanslopes8.personaltasksmanager.user.dao.JdbcUserDao;
-import com.daniellfeijo_renanslopes8.personaltasksmanager.user.model.Users;
+import com.daniellfeijo_renanslopes8.personaltasksmanager.user.dao.UserDao;
+import com.daniellfeijo_renanslopes8.personaltasksmanager.user.model.User;
 
 
 @Controller
 public class LoginController {
 	
-	private JdbcUserDao dao;
+	@Autowired
+	private UserDao dao;
 	
-	@Inject
-	public LoginController(JdbcUserDao dao){
-		this.dao = dao;
-	}
-
 	@RequestMapping("loginForm")
 	public String loginForm(){
 		return "formulario-login";
 	}
 	
+	@Transactional
 	@RequestMapping("makeLogin")
-	public String makeLogin(Users user, 
+	public String makeLogin(User user, 
 			HttpSession session){
 		if(dao.existUser(user)){
 			session.setAttribute("loggedUser", user);
