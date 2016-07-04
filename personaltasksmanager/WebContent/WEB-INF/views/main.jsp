@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link type="text/css" href="resources/css/tasks.css" rel="stylesheet" />
 <title>Personal Manager Tasks</title>
 </head>
 <body>

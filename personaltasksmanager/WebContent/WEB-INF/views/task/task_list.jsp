@@ -6,6 +6,7 @@
 <html>
 <head>
 	<script type="text/javascript" src="resources/js/jquery.js"></script>
+	<link type="text/css" href="resources/css/tasks.css" rel="stylesheet" />
 
 </head>
 <body>
@@ -25,6 +26,8 @@
 			<th>Description</th>
 			<th>Finished?</th>
 			<th>Finished Date</th>
+			<th></th>
+			<th></th>
 		</tr>
 
 		<c:forEach items="${tasks}" var="task">

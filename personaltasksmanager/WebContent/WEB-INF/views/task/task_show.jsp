@@ -3,6 +3,9 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html">
 <html>
+<head>
+		<link type="text/css" href="resources/css/tasks.css" rel="stylesheet" />
+</head>
 <body>
 	<h3>Edit task - ${task.id}</h3>
 
