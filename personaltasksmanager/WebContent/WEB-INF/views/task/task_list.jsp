@@ -23,6 +23,8 @@
 	<table>
 		<tr>
 			<th>Id</th>
+			<th>From</th>
+			<th>For</th>
 			<th>Description</th>
 			<th>Finished?</th>
 			<th>Finished Date</th>
@@ -33,6 +35,8 @@
 		<c:forEach items="${tasks}" var="task">
 			<tr id="task_${task.id}">
 				<td>${task.id}</td>
+				<td>${task.userOpening.login}</td>
+				<td>${task.userDestination.login}</td>
 				<td>${task.description}</td>
 				<c:if test="${task.finished eq false}">
 					<td>
