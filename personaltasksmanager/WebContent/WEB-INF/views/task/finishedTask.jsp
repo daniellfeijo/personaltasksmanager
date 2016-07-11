@@ -1,6 +1,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
 <td>${task.id}</td>
+<td>${task.userOpening.login}</td>
+<td>${task.userDestination.login}</td>
 <td>${task.description}</td>
 <td>Finished</td>
 <td>
