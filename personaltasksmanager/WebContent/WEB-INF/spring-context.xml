@@ -20,7 +20,7 @@
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://localhost/personaltasksmanager"/>
 		<property name="username" value="root" />
-		<property name="password" value="@!Uv9RuQz2!@" />
+		<property name="password" value="" />
 	</bean>
 	
 	<bean
@@ -53,7 +53,7 @@
 
 
 	<mvc:interceptors>
-	<bean class="com.daniellfeijo_renanslopes8.personaltasksmanager.util.interceptor.AuthorizerInterceptor" />
+		<bean class="com.daniellfeijo_renanslopes8.personaltasksmanager.util.interceptor.AuthorizerInterceptor" />
 	</mvc:interceptors>
 	
 
