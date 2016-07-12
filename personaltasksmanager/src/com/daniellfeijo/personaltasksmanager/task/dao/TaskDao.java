@@ -1,8 +1,8 @@
-package com.daniellfeijo_renanslopes8.personaltasksmanager.task.dao;
+package com.daniellfeijo.personaltasksmanager.task.dao;
 
 import java.util.List;
 
-import com.daniellfeijo_renanslopes8.personaltasksmanager.task.model.Task;
+import com.daniellfeijo.personaltasksmanager.task.model.Task;
 
 public interface TaskDao {
 	Task findById(Long id);

@@ -1,4 +1,4 @@
-package com.daniellfeijo_renanslopes8.personaltasksmanager.user.dao;
+package com.daniellfeijo.personaltasksmanager.user.dao;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import javax.persistence.Query;
 
 import org.springframework.stereotype.Repository;
 
-import com.daniellfeijo_renanslopes8.personaltasksmanager.user.model.User;
+import com.daniellfeijo.personaltasksmanager.user.model.User;
 
 @Repository
 public class JpaUserDao implements UserDao{

@@ -1,4 +1,4 @@
-package com.daniellfeijo_renanslopes8.personaltasksmanager.system.controller;
+package com.daniellfeijo.personaltasksmanager.system.controller;
 
 import javax.servlet.http.HttpSession;
 
@@ -7,8 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.daniellfeijo_renanslopes8.personaltasksmanager.user.dao.UserDao;
-import com.daniellfeijo_renanslopes8.personaltasksmanager.user.model.User;
+import com.daniellfeijo.personaltasksmanager.user.dao.UserDao;
+import com.daniellfeijo.personaltasksmanager.user.model.User;
 
 
 @Controller

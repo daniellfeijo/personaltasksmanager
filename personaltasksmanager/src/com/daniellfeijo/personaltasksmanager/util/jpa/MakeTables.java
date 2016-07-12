@@ -1,4 +1,4 @@
-package com.daniellfeijo_renanslopes8.personaltasksmanager.util.jpa;
+package com.daniellfeijo.personaltasksmanager.util.jpa;
 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;

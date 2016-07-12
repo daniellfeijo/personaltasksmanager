@@ -1,4 +1,4 @@
-package com.daniellfeijo_renanslopes8.personaltasksmanager.user.model;
+package com.daniellfeijo.personaltasksmanager.user.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

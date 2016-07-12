@@ -1,4 +1,4 @@
-package com.daniellfeijo_renanslopes8.personaltasksmanager.task.controller;
+package com.daniellfeijo.personaltasksmanager.task.controller;
 
 import java.util.List;
 
@@ -12,9 +12,9 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.daniellfeijo_renanslopes8.personaltasksmanager.task.dao.TaskDao;
-import com.daniellfeijo_renanslopes8.personaltasksmanager.task.model.Task;
-import com.daniellfeijo_renanslopes8.personaltasksmanager.user.model.User;
+import com.daniellfeijo.personaltasksmanager.task.dao.TaskDao;
+import com.daniellfeijo.personaltasksmanager.task.model.Task;
+import com.daniellfeijo.personaltasksmanager.user.model.User;
 
 @Transactional
 @Controller

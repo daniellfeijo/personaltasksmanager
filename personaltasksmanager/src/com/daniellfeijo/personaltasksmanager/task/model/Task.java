@@ -1,4 +1,4 @@
-package com.daniellfeijo_renanslopes8.personaltasksmanager.task.model;
+package com.daniellfeijo.personaltasksmanager.task.model;
 
 import java.util.Calendar;
 
@@ -15,7 +15,7 @@ import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-import com.daniellfeijo_renanslopes8.personaltasksmanager.user.model.User;
+import com.daniellfeijo.personaltasksmanager.user.model.User;
 
 @Entity
 public class Task {

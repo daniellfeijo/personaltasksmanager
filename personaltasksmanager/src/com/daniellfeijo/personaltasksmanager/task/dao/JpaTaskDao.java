@@ -1,4 +1,4 @@
-package com.daniellfeijo_renanslopes8.personaltasksmanager.task.dao;
+package com.daniellfeijo.personaltasksmanager.task.dao;
 
 import java.util.Calendar;
 import java.util.List;
@@ -8,7 +8,7 @@ import javax.persistence.PersistenceContext;
 
 import org.springframework.stereotype.Repository;
 
-import com.daniellfeijo_renanslopes8.personaltasksmanager.task.model.Task;
+import com.daniellfeijo.personaltasksmanager.task.model.Task;
 
 @Repository
 public class JpaTaskDao implements TaskDao{

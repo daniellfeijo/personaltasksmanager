@@ -1,4 +1,4 @@
-package com.daniellfeijo_renanslopes8.personaltasksmanager.task.dao;
+package com.daniellfeijo.personaltasksmanager.task.dao;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -14,7 +14,7 @@ import javax.sql.DataSource;
 
 import org.springframework.stereotype.Repository;
 
-import com.daniellfeijo_renanslopes8.personaltasksmanager.task.model.Task;
+import com.daniellfeijo.personaltasksmanager.task.model.Task;
 
 @Repository
 public class JdbcTaskDao {
