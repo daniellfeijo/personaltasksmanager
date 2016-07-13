@@ -6,5 +6,7 @@ public interface UserDao {
 	
 	boolean existUser(User user);
 	
+	boolean existActiveUser(User user);
+	
 
 }

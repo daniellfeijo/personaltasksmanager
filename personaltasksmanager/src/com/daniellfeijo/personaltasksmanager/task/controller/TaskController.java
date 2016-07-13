@@ -36,7 +36,7 @@ public class TaskController {
 		}
 		task.setUserOpening((User) session.getAttribute("loggedUser"));
 		dao.add(task);
-		return ("task/task_added");
+		return ("redirect:listTasks");
 	}
 
 	@RequestMapping("editTask")

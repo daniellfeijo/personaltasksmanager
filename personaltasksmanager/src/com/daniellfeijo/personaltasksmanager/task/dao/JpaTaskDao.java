@@ -27,7 +27,7 @@ public class JpaTaskDao implements TaskDao{
 	@SuppressWarnings("unchecked")
 	public List<Task> list(){
 		return manager.
-				createQuery("select t from Task t").getResultList();
+				createQuery("select t from Task as t ORDER BY t.id DESC").getResultList();
 	}
 	
 	public Task findById(Long id){

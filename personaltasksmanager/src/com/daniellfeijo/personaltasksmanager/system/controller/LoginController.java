@@ -31,7 +31,7 @@ public class LoginController {
 	@RequestMapping("makeLogin")
 	public String makeLogin(User user, 
 			HttpSession session){
-		if(dao.existUser(user)){
+		if(dao.existActiveUser(user)){
 			session.setAttribute("loggedUser", user);
 			return "main";
 		}

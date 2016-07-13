@@ -31,5 +31,23 @@ public class JpaUserDao implements UserDao{
 		}
 	}
 
+	@SuppressWarnings("unchecked")
+	public boolean existActiveUser(User user){
+		Query query =  manager.
+				createQuery("select u from User as u " + 
+						"where u.email= :parameterEmail " + 
+							"and u.password = :parameterPassword " +
+								"and u.active = :parameterActive");
+				query.setParameter("parameterEmail", user.getEmail());
+				query.setParameter("parameterPassword", user.getPassword());
+				query.setParameter("parameterActive", true);
+		List<User> users = query.getResultList();
+		if(users.isEmpty()){
+			return false;
+		}else{
+			return true;
+		}
+	}
+
 
 }
