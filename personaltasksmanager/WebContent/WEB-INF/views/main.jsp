@@ -14,7 +14,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
 		<c:import url="menu/menu_header.jsp"/>
     </nav>
-
+    
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">

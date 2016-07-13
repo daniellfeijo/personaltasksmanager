@@ -18,13 +18,14 @@
             <li role="presentation"><a href="#">Contact</a></li>
           </ul>
         </nav>
-        <h3 class="text-muted">Personal Tasks Manager</h3>
+        <h3 class="text-muted">PersonalTasksManager.com</h3>
       </div>
 
       <div class="jumbotron">
-        <h1>A powerful task manager!</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Request a demo user!</a></p>
+        <h1>A powerful tasks manager open source!</h1>
+        <p class="lead">Personal Tasks Manager is open source project of a powerful tasks manager. If you know Java, 
+        	Spring MVC, MySQL, Hibernate, Bootstrap, ... Let's do together! </p>
+        <p><a class="btn btn-lg btn-success" href="https://github.com/daniellfeijo/personaltasksmanager" role="button">Let's do together! See the code!</a></p>
       </div>
 
       <div class="row marketing">
