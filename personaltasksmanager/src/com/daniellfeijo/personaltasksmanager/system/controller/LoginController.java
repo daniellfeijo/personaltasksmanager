@@ -22,6 +22,11 @@ public class LoginController {
 		return "formulario-login";
 	}
 	
+	@RequestMapping("main")
+	public String main(){
+		return "main";
+	}
+	
 	@Transactional
 	@RequestMapping("makeLogin")
 	public String makeLogin(User user, 

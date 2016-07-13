@@ -6,22 +6,19 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="resources/bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="resources/bootstrap/css/dashboard.css">
+	<link rel="stylesheet" type="text/css" href="resources/bootstrap/css/dashboard.css">
+	<link rel="stylesheet" type="text/css" href="resources/css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Personal Tasks Manager</title>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-default container">
 		<c:import url="menu/menu_header.jsp"/>
     </nav>
     
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-			<c:import url="menu/menu_sidebar.jsp"/>
-        </div>
-        
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <div class="container-fluid container">
+      <div class="row">   
+        <div class="col-sm-12 col-md-12 main">
           <h1 class="page-header">Dashboard</h1>
 
           <div class="row placeholders">

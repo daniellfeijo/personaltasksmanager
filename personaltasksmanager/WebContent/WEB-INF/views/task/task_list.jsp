@@ -5,17 +5,26 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="resources/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="resources/bootstrap/css/dashboard.css">
+	<link rel="stylesheet" type="text/css" href="resources/css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<title>Personal Tasks Manager</title>
 </head>
 <body>
-	<div class="container">
-		<a href="addTask">Add new task</a>
-		<br> <br>
-		<div class="table-responsive">
-			<table class="table table-striped">
-				<tr>
+    <nav class="navbar navbar-default container">
+		<c:import url="../menu/menu_header.jsp"/>
+    </nav>
+    
+    <div class="container-fluid container">
+      <div class="row">            
+        <div class="col-sm-12 col-md-12 main">
+          <h1 class="page-header">All Tasks</h1>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
 					<th>Id</th>
 					<th>From</th>
 					<th>For</th>
@@ -24,8 +33,9 @@
 					<th>Finished Date</th>
 					<th></th>
 					<th></th>
-				</tr>
-		
+                </tr>
+              </thead>
+              <tbody>
 				<c:forEach items="${tasks}" var="task">
 					<tr id="task_${task.id}">
 						<td>${task.id}</td>
@@ -56,9 +66,14 @@
 						</td>
 					</tr>
 				</c:forEach>
-			</table>
-		</div>
-	</div>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+<script src="resources/jquery.js"></script>
+<script src="resources/bootstrap/js/bootstrap.min.js"></script>		
 <script type="text/javascript">
 	function finishNow(id){
 		$.post("finishTask", {'id':id}, function(answer) {
@@ -66,8 +81,6 @@
 		});
 	}
 
-</script>
-<script src="resources/jquery.js"></script>
-<script src="resources/bootstrap/js/bootstrap.min.js"></script>	
+</script>	
 </body>
 </html>
