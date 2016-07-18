@@ -29,12 +29,21 @@
 			    </div>
 			  </div>
 			  <div class="form-group">
-			    <label for="inputPassword3" class="col-sm-3 control-label">Prioridade</label>
-			    <div class="col-sm-3">
+			    <label for="inputPassword3" class="col-sm-2 control-label">Priority</label>
+			    <div class="col-sm-2"><!--
+			        --><select class="form-control" >
+			          <option>High</option>
+			          <option selected>Moderate</option>
+			          <option>Low</option>
+			        </select>
+			    </div>
+			  
+			    <label for="inputPassword3" class="col-sm-2 control-label">Group</label>
+			    <div class="col-sm-2">
 			      <input type="password" name="password" class="form-control" id="inputPassword3" placeholder="Password">
 			    </div>
-			    <label for="inputPassword3" class="col-sm-3 control-label">Projeto</label>
-			    <div class="col-sm-3">
+			    <label for="inputPassword3" class="col-sm-2 control-label">Projeto</label>
+			    <div class="col-sm-2">
 			      <input type="password" name="password" class="form-control" id="inputPassword3" placeholder="Password">
 			    </div>
 			    

@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.daniellfeijo.personaltasksmanager.task.dao.TaskDao;
 import com.daniellfeijo.personaltasksmanager.task.model.Task;
-import com.daniellfeijo.personaltasksmanager.user.model.User;
 
 @Transactional
 @Controller
@@ -34,8 +33,7 @@ public class TaskController {
 		if (result.hasErrors()) {
 			return "task/task_form";
 		}
-		task.setUserOpening((User) session.getAttribute("loggedUser"));
-		dao.add(task);
+		task.addTask(dao, session);
 		return ("redirect:listTasks");
 	}
 

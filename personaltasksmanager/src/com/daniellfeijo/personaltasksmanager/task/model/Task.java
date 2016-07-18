@@ -10,11 +10,13 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.servlet.http.HttpSession;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import com.daniellfeijo.personaltasksmanager.task.dao.TaskDao;
 import com.daniellfeijo.personaltasksmanager.user.model.User;
 
 @Entity
@@ -30,6 +32,10 @@ public class Task {
 
 	private boolean finished;
 
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	@Temporal(TemporalType.DATE)
+	private Calendar openDate;
+	
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	@Temporal(TemporalType.DATE)
 	private Calendar finishedDate;
@@ -91,5 +97,29 @@ public class Task {
 	public void setUserDestination(User userDestination) {
 		this.userDestination = userDestination;
 	}
+	
+	public Calendar getOpenDate() {
+		return openDate;
+	}
+
+	public void setOpenDate(Calendar openDate) {
+		this.openDate = openDate;
+	}
+	
+	
+	
+	
+	//others methods
+	
+	
+
+	public void addTask(TaskDao dao, HttpSession session){
+		//when the opening user and destination user are the same
+		this.setUserOpening((User) session.getAttribute("loggedUser"));
+		this.setUserDestination((User) session.getAttribute("loggedUser"));
+		this.setOpenDate(Calendar.getInstance());
+
+		dao.add(this);
+	}	
 
 }

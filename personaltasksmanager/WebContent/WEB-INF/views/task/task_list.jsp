@@ -26,6 +26,7 @@
               <thead>
                 <tr>
 					<th>Id</th>
+					<th>Open Date</th>
 					<th>From</th>
 					<th>For</th>
 					<th>Description</th>
@@ -39,8 +40,11 @@
 				<c:forEach items="${tasks}" var="task">
 					<tr id="task_${task.id}">
 						<td>${task.id}</td>
-						<td>${task.userOpening.login}</td>
-						<td>${task.userDestination.login}</td>
+						<td><fmt:formatDate
+								value="${task.openDate.time}"
+									pattern="yyyy-MM-dd"/></td>
+						<td>${task.userOpening.email}</td>
+						<td>${task.userDestination.email}</td>
 						<td>${task.description}</td>
 						<c:if test="${task.finished eq false}">
 							<td>

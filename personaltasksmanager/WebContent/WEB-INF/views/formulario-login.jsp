@@ -5,6 +5,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="resources/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="resources/css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Personal Tasks Manager</title>
 </head>
@@ -29,7 +30,7 @@
       </div>
 
       <div class="row marketing">
-        <div class="col-lg-6">
+        <div class="col-xs-12 col-sm-6 col-lg-6">
           <h4>Subheading</h4>
           <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
 
@@ -40,42 +41,47 @@
           <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
         </div>
 
-        <div class="col-lg-6">
-			<form action="makeLogin" method="post" class="form-horizontal">
-			  <div class="form-group">
-			    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-			    <div class="col-sm-10">
-			      <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Email">
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-			    <div class="col-sm-10">
-			      <input type="password" name="password" class="form-control" id="inputPassword3" placeholder="Password">
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <div class="col-sm-offset-2 col-sm-10">
-			      <div class="checkbox">
-			        <label>
-			          <input type="checkbox"> Remember me
-			        </label>
-			      </div>
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <div class="col-sm-offset-2 col-sm-10">
-			      <button type="submit" class="btn btn-default">Sign in</button>
-			    </div>
-			  </div>
-			</form>
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+         	<div class="container col-xs-12 col-sm-12 col-lg-12">
+	        	<h2>Sign In</h2>
+	        	<p>Access Personal Tasks Manager</p>
+				<form action="makeLogin" method="post">
+				  <div class="form-group">
+				    <label for="inputEmail3" class="control-label">Email</label>
+				    <div>
+				      <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Email">
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <label for="inputPassword3" class="control-label">Password</label>
+				    <div>
+				      <input type="password" name="password" class="form-control" id="inputPassword3" placeholder="Password">
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <div class="col-sm-offset-2">
+				      <div class="checkbox">
+				        <label>
+				          <input type="checkbox"> Remember me
+				        </label>
+				      </div>
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <div class="col-sm-offset-2">
+				      <button type="submit" class="btn btn-default">Sign in</button>
+				    </div>
+				  </div>
+				</form>
+			</div>
         </div>
       </div>
-
-      <footer class="footer">
-        <p>&copy; 2015 Company, Inc.</p>
-      </footer>
-
+		
+	<div class="row">
+		<footer class="footer col-xs-12 col-sm-12 col-lg-12">
+	 		<p>&copy; 2015 Company, Inc.</p>
+		</footer>
+	</div>
     </div> <!-- /container -->
 	
 
