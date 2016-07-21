@@ -29,8 +29,8 @@ public class JdbcUserDao {
 	public boolean existUser(User user) {
 		try {
 			PreparedStatement stmt = this.connection
-					.prepareStatement("select * from users where login = ? and password = ?");
-			stmt.setString(1, user.getLogin());
+					.prepareStatement("select * from users where email = ? and password = ?");
+			stmt.setString(1, user.getEmail());
 			stmt.setString(2, user.getPassword());
 			
 			ResultSet rs = stmt.executeQuery();

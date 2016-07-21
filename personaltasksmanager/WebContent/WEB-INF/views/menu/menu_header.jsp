@@ -1,4 +1,10 @@
-               
+ <!DOCTYPE html>
+<html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<head>
+</head>
+<body>              
+ 
     <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -31,7 +37,25 @@
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
+        
+        
+        <c:choose>
+			<c:when test="${loggedUser.profile != 'root'}">
+				<!-- Don't show -->
+			</c:when>
+			<c:otherwise>
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Root<span class="caret"></span></a>
+		          <ul class="dropdown-menu">
+		            <li><a href="#">Users</a></li>
+		            <li><a href="#">Another action</a></li>
+		            <li><a href="#">Something else here</a></li>
+		          </ul>
+		        </li>
+			</c:otherwise>
+        </c:choose>
+        
+        
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">${loggedUser.email}<span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -45,4 +69,5 @@
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
-      
+</body>
+</html>

@@ -16,7 +16,7 @@ public class User {
 
 	private boolean active;
 
-	private String login;
+	private String profile;
 
 	private String email;
 	
@@ -38,12 +38,12 @@ public class User {
 		this.active = active;
 	}
 
-	public String getLogin() {
-		return login;
+	public String getProfile() {
+		return profile;
 	}
 
-	public void setLogin(String login) {
-		this.login = login;
+	public void setProfile(String profile) {
+		this.profile = profile;
 	}
 
 	public String getPassword() {
