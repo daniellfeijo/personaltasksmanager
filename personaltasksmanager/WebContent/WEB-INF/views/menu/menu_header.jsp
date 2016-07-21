@@ -25,7 +25,7 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tasks <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="listTasks"">List Tasks</a></li>
+            <li><a href="listTasks">List Tasks</a></li>
             <li><a href="newTask">New Task</a></li>
             <li><a href="#">Something else here</a></li>
             <li role="separator" class="divider"></li>
@@ -47,7 +47,7 @@
 		        <li class="dropdown">
 		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Root<span class="caret"></span></a>
 		          <ul class="dropdown-menu">
-		            <li><a href="#">Users</a></li>
+		            <li><a href="listUsersRoot">Users</a></li>
 		            <li><a href="#">Another action</a></li>
 		            <li><a href="#">Something else here</a></li>
 		          </ul>

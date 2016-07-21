@@ -57,6 +57,14 @@ public class JpaUserDao implements UserDao{
 		User user = (User) query.getSingleResult();
 		return user;
 	}
+	
+	
+	@SuppressWarnings("unchecked")
+	public List<User> list(){
+		return manager.
+				createQuery("select u from User as u ORDER BY u.id ASC").getResultList();
+	}
+
 
 
 }
