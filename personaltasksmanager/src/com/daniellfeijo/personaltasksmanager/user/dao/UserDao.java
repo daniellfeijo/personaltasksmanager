@@ -8,5 +8,7 @@ public interface UserDao {
 	
 	boolean existActiveUser(User user);
 	
+	User catchByEmail(String email);
+	
 
 }

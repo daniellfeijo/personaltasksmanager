@@ -2,7 +2,6 @@ package com.daniellfeijo.personaltasksmanager.task.model;
 
 import java.util.Calendar;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -40,11 +39,11 @@ public class Task {
 	@Temporal(TemporalType.DATE)
 	private Calendar finishedDate;
 
-	@ManyToOne(cascade=CascadeType.PERSIST)
+	@ManyToOne
 	@JoinColumn(name = "userOpening_id", nullable = true)
 	private User userOpening;
 
-	@ManyToOne(cascade=CascadeType.PERSIST)
+	@ManyToOne
 	@JoinColumn(name = "userDestination_id", nullable = true)
 	private User userDestination;
 	

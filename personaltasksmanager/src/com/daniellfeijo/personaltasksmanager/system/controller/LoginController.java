@@ -32,7 +32,7 @@ public class LoginController {
 	public String makeLogin(User user, 
 			HttpSession session){
 		if(dao.existActiveUser(user)){
-			session.setAttribute("loggedUser", user);
+			user.singIn(session, dao);
 			return "main";
 		}
 		return "redirect:loginForm";

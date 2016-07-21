@@ -3,6 +3,9 @@ package com.daniellfeijo.personaltasksmanager.user.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.servlet.http.HttpSession;
+
+import com.daniellfeijo.personaltasksmanager.user.dao.UserDao;
 
 @Entity
 public class User {
@@ -57,6 +60,13 @@ public class User {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	//other methods
+	
+	public void singIn(HttpSession session, UserDao dao){
+		User loggedUser = dao.catchByEmail(this.getEmail());
+		session.setAttribute("loggedUser", loggedUser);
 	}
 
 }

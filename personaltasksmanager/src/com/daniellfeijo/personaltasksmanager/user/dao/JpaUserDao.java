@@ -48,6 +48,15 @@ public class JpaUserDao implements UserDao{
 			return true;
 		}
 	}
+	
+	public User catchByEmail(String email){
+		Query query = manager.
+				createQuery("select u from User as u " +
+						"where u.email= :parameterEmail");
+		query.setParameter("parameterEmail", email);
+		User user = (User) query.getSingleResult();
+		return user;
+	}
 
 
 }
