@@ -30,18 +30,82 @@
       </div>
 
       <div class="row marketing">
-        <div class="col-xs-12 col-sm-6 col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
+        <div class="panel-group col-xs-12 col-sm-4 col-lg-4" id="panels-information1">
+                
+      		<div class="panel panel-default">
+        		<div class="panel-heading">
+          			<h3 class="panel-title" data-toggle="collapse"
+          				data-target="#information1-1" data-parent="#panels-information1">User profiles</h3>
+        		</div>
+        	<div id="information1-1" class="collapse in">
+          		<div class="panel-body">
+            		<p><strong>root</strong> - Users  with "root" profile can add, enable and disable any user.</p>
+            		<p><strong>user</strong> - the general profile for all users.</p>
+          		</div>
+        	</div>
+      	</div>
+      	
+      	
+      	<div class="panel panel-default">
+        	<div class="panel-heading">
+          		<h3 class="panel-title" data-toggle="collapse"
+          			data-target="#information1-2" data-parent="#panels-information1">Priority of Tasks</h3>
+        	</div>
+        	<div id="information1-2" class="collapse">
+          		<div class="panel-body">
+            		<p>Priority of Tasks can be <strong>High</strong>, <strong>Moderate</strong> and <strong>Low</strong></p>
+          		</div>
+        	</div>
+      	</div>
+      	
+      	
+      	
+                
           <h4>Subheading</h4>
           <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
 
           <h4>Subheading</h4>
           <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
         </div>
+        
+        
+	<div class="panel-group col-xs-12 col-sm-4 col-lg-4" id="panels-information2">               
+      	<div class="panel panel-default">
+        		<div class="panel-heading">
+          			<h3 class="panel-title" data-toggle="collapse"
+          				data-target="#information2-1" data-parent="#panels-information2">User profiles</h3>
+        		</div>
+        	<div id="information2-1" class="collapse">
+          		<div class="panel-body">
+            		<p><strong>root</strong> - Users  with "root" profile can add, enable and disable any user.</p>
+          		</div>
+        	</div>
+      	</div>
+      	
+      	
+      	<div class="panel panel-default">
+        	<div class="panel-heading">
+          		<h3 class="panel-title" data-toggle="collapse"
+          			data-target="#information2-2" data-parent="#panels-information2">Priority of Tasks</h3>
+        	</div>
+        	<div id="information2-2" class="collapse">
+          		<div class="panel-body">
+            		<p>Priority of Tasks can be <strong>High</strong>, <strong>Moderate</strong> and <strong>Low</strong></p>
+          		</div>
+        	</div>
+      	</div>
+      	                
+        <h4>Subheading</h4>
+        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
 
-        <div class="col-xs-12 col-sm-6 col-lg-6">
+        <h4>Subheading</h4>
+        <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+	</div>
+        
+        
+        
+
+        <div class="col-xs-12 col-sm-4 col-lg-4">
          	<div class="container col-xs-12 col-sm-12 col-lg-12">
 	        	<h2>Sign In</h2>
 	        	<p>Access Personal Tasks Manager</p>
