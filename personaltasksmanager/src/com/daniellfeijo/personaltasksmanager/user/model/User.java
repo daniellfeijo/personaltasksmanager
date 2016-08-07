@@ -14,7 +14,7 @@ public class User {
 	@GeneratedValue
 	private Long id;
 
-	private boolean active;
+	private boolean enabled;
 
 	private String profile;
 
@@ -30,12 +30,12 @@ public class User {
 		this.id = id;
 	}
 
-	public boolean isActive() {
-		return active;
+	public boolean isEnabled() {
+		return enabled;
 	}
 
-	public void setActive(boolean active) {
-		this.active = active;
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
 	}
 
 	public String getProfile() {

@@ -32,15 +32,15 @@ public class JpaUserDao implements UserDao{
 	}
 
 	@SuppressWarnings("unchecked")
-	public boolean existActiveUser(User user){
+	public boolean existEnabledUser(User user){
 		Query query =  manager.
 				createQuery("select u from User as u " + 
 						"where u.email= :parameterEmail " + 
 							"and u.password = :parameterPassword " +
-								"and u.active = :parameterActive");
+								"and u.enabled = :parameterEnabled");
 				query.setParameter("parameterEmail", user.getEmail());
 				query.setParameter("parameterPassword", user.getPassword());
-				query.setParameter("parameterActive", true);
+				query.setParameter("parameterEnabled", true);
 		List<User> users = query.getResultList();
 		if(users.isEmpty()){
 			return false;

@@ -26,7 +26,7 @@
               <thead>
                 <tr>
 					<th>Id</th>
-					<th>Active</th>
+					<th>Enabled</th>
 					<th>Email</th>
 					<th>Profile</th>
 					<th>Deactivate/Activate</th>
@@ -36,16 +36,16 @@
 				<c:forEach items="${users}" var="user">
 					<tr id="user_${user.id}">
 						<td>${user.id}</td>
-						<td>${user.active}</td>
+						<td>${user.enabled}</td>
 						<td>${user.email}</td>
 						<td>${user.profile}</td>
-						<c:if test="${user.active eq true}">
+						<c:if test="${user.enabled eq true}">
 							<td>
 								<a href="deactivateUserRoot?id=${user.id}">Deactivate</a>
 							</td>
 						</c:if>
 			
-						<c:if test="${user.active eq false}">
+						<c:if test="${user.enabled eq false}">
 							<td>
 								<a href="activateUserRoot?id=${user.id}">Activate</a>
 							</td>

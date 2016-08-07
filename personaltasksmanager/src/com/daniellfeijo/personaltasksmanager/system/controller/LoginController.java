@@ -31,7 +31,7 @@ public class LoginController {
 	@RequestMapping("makeLogin")
 	public String makeLogin(User user, 
 			HttpSession session){
-		if(dao.existActiveUser(user)){
+		if(dao.existEnabledUser(user)){
 			user.singIn(session, dao);
 			return "main";
 		}
