@@ -29,7 +29,7 @@
 					<th>Enabled</th>
 					<th>Email</th>
 					<th>Profile</th>
-					<th>Deactivate/Activate</th>
+					<th>Disable/Enable</th>
                 </tr>
               </thead>
               <tbody>
@@ -41,13 +41,13 @@
 						<td>${user.profile}</td>
 						<c:if test="${user.enabled eq true}">
 							<td>
-								<a href="deactivateUserRoot?id=${user.id}">Deactivate</a>
+								<a href="disableUserRoot?id=${user.id}">Disable</a>
 							</td>
 						</c:if>
 			
 						<c:if test="${user.enabled eq false}">
 							<td>
-								<a href="activateUserRoot?id=${user.id}">Activate</a>
+								<a href="enableUserRoot?id=${user.id}">Enable</a>
 							</td>
 						</c:if>
 					</tr>
