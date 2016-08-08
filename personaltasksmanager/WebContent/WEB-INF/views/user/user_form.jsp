@@ -25,14 +25,27 @@
 			  		<div class="form-group">
 						<label for="inputEmail" class="col-sm-2 control-label">E-mail</label>
 						<div class="col-sm-5">									
-							<input type="email" name="email" class="form-control" id="inputEmail" placeholder="E-mail">
+							<input type="email" value="${user.email}" name="email" 
+								class="form-control" id="inputEmail" placeholder="E-mail">
 							<span class="label label-danger">${emailException}</span>
 						</div>
 			    		<label for="selectProfile" class="col-sm-2 control-label">Profile</label>
 		    			<div class="col-sm-2"><!--
 		        			--><select id="selectProfile" class="form-control" name="profile">
-		          			<option value="root">root</option>
-		          			<option value="user" selected>user</option>
+							<c:if test="${user.profile != null}">
+								<option selected value="${user.profile}">${user.profile }</option>
+								<c:if test="${user.profile == 'root'}">
+					  				<option value="user">user</option>
+								</c:if>
+								<c:if test="${user.profile == 'user'}">
+								  <option value="root">root</option>
+								</c:if>
+							</c:if>		        			
+							<c:if test="${user.profile == null}">
+							  <option value="root">root</option>
+							  <option value="user" selected>user</option>
+							</c:if>		        			
+
 		        			</select>
 	    				</div>
 			  			    

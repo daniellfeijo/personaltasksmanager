@@ -27,6 +27,7 @@ public class UserController {
 	@RequestMapping("newUserRoot")
 	public String form(HttpSession session) {
 		session.setAttribute("emailException", "");
+		session.setAttribute("user", new User());
 		return ("user/user_form");
 	}
 	
@@ -40,6 +41,7 @@ public class UserController {
 			user.addUser(dao);
 		} catch (ExistEmailException e) {
 			session.setAttribute("emailException", "Email already exists!");
+			session.setAttribute("user", user);
 			return ("user/user_form");
 		}
 		return ("redirect:listUsersRoot");
