@@ -45,8 +45,8 @@
 							  <option value="root">root</option>
 							  <option value="user" selected>user</option>
 							</c:if>		        			
-
 		        			</select>
+		        			<span class="label label-danger">${userProfileException}</span>
 	    				</div>
 			  			    
 			  </div>

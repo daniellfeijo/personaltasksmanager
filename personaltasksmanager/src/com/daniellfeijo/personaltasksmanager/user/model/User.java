@@ -6,6 +6,7 @@ import javax.persistence.Id;
 import javax.servlet.http.HttpSession;
 
 import com.daniellfeijo.personaltasksmanager.system.exception.ExistEmailException;
+import com.daniellfeijo.personaltasksmanager.system.exception.InvalidUserProfileException;
 import com.daniellfeijo.personaltasksmanager.user.dao.UserDao;
 
 @Entity
@@ -71,10 +72,15 @@ public class User {
 	}
 	
 
-	public void addUser(UserDao dao) throws ExistEmailException{		
+	public void addUser(UserDao dao) throws ExistEmailException, InvalidUserProfileException{		
 		if (dao.existEmailUser(this)){
-			throw new ExistEmailException("Email já existe");
+			throw new ExistEmailException("Email already exists!");
 		}
+		if (!(this.profile.equals("root")) &&
+				!(this.profile.equals("user"))){
+			throw new InvalidUserProfileException("Invalid Profile");
+		}
+
 		this.setEnabled(true);
 		this.setPassword("123");
 		

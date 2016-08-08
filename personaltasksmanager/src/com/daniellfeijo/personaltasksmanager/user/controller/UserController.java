@@ -13,6 +13,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.daniellfeijo.personaltasksmanager.system.exception.ExistEmailException;
+import com.daniellfeijo.personaltasksmanager.system.exception.InvalidUserProfileException;
 import com.daniellfeijo.personaltasksmanager.user.dao.UserDao;
 import com.daniellfeijo.personaltasksmanager.user.model.User;
 
@@ -27,6 +28,7 @@ public class UserController {
 	@RequestMapping("newUserRoot")
 	public String form(HttpSession session) {
 		session.setAttribute("emailException", "");
+		session.setAttribute("userProfileException", "");
 		session.setAttribute("user", new User());
 		return ("user/user_form");
 	}
@@ -40,7 +42,11 @@ public class UserController {
 		try {
 			user.addUser(dao);
 		} catch (ExistEmailException e) {
-			session.setAttribute("emailException", "Email already exists!");
+			session.setAttribute("emailException", e.getMessage());
+			session.setAttribute("user", user);
+			return ("user/user_form");
+		}catch (InvalidUserProfileException e) {
+			session.setAttribute("userProfileException", e.getMessage());
 			session.setAttribute("user", user);
 			return ("user/user_form");
 		}
