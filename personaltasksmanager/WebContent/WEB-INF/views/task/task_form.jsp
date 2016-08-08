@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,6 +26,7 @@
 			  <div class="form-group">
 			    <label for="inputEmail3" class="col-sm-2 control-label">Description</label>
 			    <div class="col-sm-10">
+					<form:errors path="task.description"/>
 			      <textarea rows="5" cols="100" name="description" class="form-control" id="inputEmail3" placeholder="Email"></textarea>
 			    </div>
 			  </div>

@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.servlet.http.HttpSession;
 
+import com.daniellfeijo.personaltasksmanager.system.exception.ExistEmailException;
 import com.daniellfeijo.personaltasksmanager.user.dao.UserDao;
 
 @Entity
@@ -68,5 +69,17 @@ public class User {
 		User loggedUser = dao.catchByEmail(this.getEmail());
 		session.setAttribute("loggedUser", loggedUser);
 	}
+	
+
+	public void addUser(UserDao dao) throws ExistEmailException{		
+		if (dao.existEmailUser(this)){
+			throw new ExistEmailException("Email já existe");
+		}
+		this.setEnabled(true);
+		this.setPassword("123");
+		
+		dao.add(this);
+	}	
+
 
 }

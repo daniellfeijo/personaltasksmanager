@@ -48,7 +48,7 @@
 		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Root<span class="caret"></span></a>
 		          <ul class="dropdown-menu">
 		            <li><a href="listUsersRoot">Users</a></li>
-		            <li><a href="#">Another action</a></li>
+		            <li><a href="newUserRoot">Add User</a></li>
 		            <li><a href="#">Something else here</a></li>
 		          </ul>
 		        </li>

@@ -6,6 +6,10 @@ import com.daniellfeijo.personaltasksmanager.user.model.User;
 
 public interface UserDao {
 	
+	void add(User user);
+	
+	boolean existEmailUser(User user);
+	
 	boolean existUser(User user);
 	
 	boolean existEnabledUser(User user);

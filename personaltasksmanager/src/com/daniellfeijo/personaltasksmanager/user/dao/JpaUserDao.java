@@ -16,6 +16,10 @@ public class JpaUserDao implements UserDao{
 	@PersistenceContext
 	EntityManager manager;
 
+	public void add(User user){
+		manager.persist(user);
+	}
+
 	
 	@SuppressWarnings("unchecked")
 	public boolean existUser(User user){
@@ -48,6 +52,21 @@ public class JpaUserDao implements UserDao{
 			return true;
 		}
 	}
+	
+	@SuppressWarnings("unchecked")
+	public boolean existEmailUser(User user){
+		Query query =  manager.
+				createQuery("select u from User as u " + 
+						"where u.email= :parameterEmail");
+				query.setParameter("parameterEmail", user.getEmail());
+		List<User> users = query.getResultList();
+		if(users.isEmpty()){
+			return false;
+		}else{
+			return true;
+		}
+	}
+	
 	
 	public User catchByEmail(String email){
 		Query query = manager.
