@@ -1,13 +1,18 @@
 package com.daniellfeijo.personaltasksmanager.user.model;
 
+import java.util.List;
+
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.servlet.http.HttpSession;
 
 import com.daniellfeijo.personaltasksmanager.system.exception.ExistEmailException;
 import com.daniellfeijo.personaltasksmanager.system.exception.InvalidUserProfileException;
 import com.daniellfeijo.personaltasksmanager.user.dao.UserDao;
+import com.daniellfeijo.personaltasksmanager.workgroup.model.WorkGroup;
 
 @Entity
 public class User {
@@ -24,6 +29,10 @@ public class User {
 	
 	private String password;
 
+	@ManyToMany(fetch = FetchType.LAZY, mappedBy="members")
+	private List<WorkGroup> workGroups;
+
+	
 	public Long getId() {
 		return id;
 	}
