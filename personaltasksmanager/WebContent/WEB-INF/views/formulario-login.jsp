@@ -73,11 +73,11 @@
       	<div class="panel panel-default">
         		<div class="panel-heading">
           			<h3 class="panel-title" data-toggle="collapse"
-          				data-target="#information2-1" data-parent="#panels-information2">User profiles</h3>
+          				data-target="#information2-1" data-parent="#panels-information2">Work Groups</h3>
         		</div>
         	<div id="information2-1" class="collapse">
           		<div class="panel-body">
-            		<p><strong>root</strong> - Users  with "root" profile can add, enable and disable any user.</p>
+            		<p>The work groups has a owner and a members list.</p>
           		</div>
         	</div>
       	</div>
