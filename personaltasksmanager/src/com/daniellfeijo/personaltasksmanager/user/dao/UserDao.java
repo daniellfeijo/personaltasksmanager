@@ -15,6 +15,10 @@ public interface UserDao {
 	boolean existEnabledUser(User user);
 	
 	User catchByEmail(String email);
+	
+	void disable(Long id);
+	
+	void enable(Long id);
 
 	List<User> list();
 

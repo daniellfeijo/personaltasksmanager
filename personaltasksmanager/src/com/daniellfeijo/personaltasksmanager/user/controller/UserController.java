@@ -59,6 +59,19 @@ public class UserController {
 		model.addAttribute("users", users);
 		return "user/user_list";
 	}
+	
+	
+	@RequestMapping("disableUserRoot")
+	public String disableUserRoot(Long id) {
+		dao.disable(id);
+		return ("redirect:listUsersRoot");
+	}
+
+	@RequestMapping("enableUserRoot")
+	public String enableUserRoot(Long id) {
+		dao.enable(id);
+		return ("redirect:listUsersRoot");
+	}
 
 
 }

@@ -15,7 +15,12 @@ public class JpaUserDao implements UserDao{
 	
 	@PersistenceContext
 	EntityManager manager;
-
+	
+	
+	public User findById(Long id){
+		return manager.find(User.class, id);
+	}
+	
 	public void add(User user){
 		manager.persist(user);
 	}
@@ -83,6 +88,17 @@ public class JpaUserDao implements UserDao{
 		return manager.
 				createQuery("select u from User as u ORDER BY u.id ASC").getResultList();
 	}
+	
+	public void disable(Long id){
+		User user = findById(id);
+		user.setEnabled(false);
+	}
+
+	public void enable(Long id){
+		User user = findById(id);
+		user.setEnabled(true);
+	}
+
 
 
 
