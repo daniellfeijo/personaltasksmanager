@@ -1,5 +1,6 @@
 package com.daniellfeijo.personaltasksmanager.user.dao;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -9,6 +10,7 @@ import javax.persistence.Query;
 import org.springframework.stereotype.Repository;
 
 import com.daniellfeijo.personaltasksmanager.user.model.User;
+import com.daniellfeijo.personaltasksmanager.util.security.Encryption;
 
 @Repository
 public class JpaUserDao implements UserDao{
@@ -41,14 +43,14 @@ public class JpaUserDao implements UserDao{
 	}
 
 	@SuppressWarnings("unchecked")
-	public boolean existEnabledUser(User user){
+	public boolean existEnabledUser(User user) throws NoSuchAlgorithmException{
 		Query query =  manager.
 				createQuery("select u from User as u " + 
 						"where u.email= :parameterEmail " + 
 							"and u.password = :parameterPassword " +
 								"and u.enabled = :parameterEnabled");
 				query.setParameter("parameterEmail", user.getEmail());
-				query.setParameter("parameterPassword", user.getPassword());
+				query.setParameter("parameterPassword", Encryption.md5(user.getPassword()));
 				query.setParameter("parameterEnabled", true);
 		List<User> users = query.getResultList();
 		if(users.isEmpty()){

@@ -1,5 +1,7 @@
 package com.daniellfeijo.personaltasksmanager.system.controller;
 
+import java.security.NoSuchAlgorithmException;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,9 +33,14 @@ public class LoginController {
 	@RequestMapping("makeLogin")
 	public String makeLogin(User user, 
 			HttpSession session){
-		if(dao.existEnabledUser(user)){
-			user.singIn(session, dao);
-			return "main";
+		try {
+			if(dao.existEnabledUser(user)){
+				user.singIn(session, dao);
+				return "main";
+			}
+		} catch (NoSuchAlgorithmException e) {
+			return "redirect:loginForm";
+			//e.printStackTrace();
 		}
 		return "redirect:loginForm";
 	}

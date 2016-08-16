@@ -1,5 +1,6 @@
 package com.daniellfeijo.personaltasksmanager.user.controller;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -49,7 +50,11 @@ public class UserController {
 			session.setAttribute("userProfileException", e.getMessage());
 			session.setAttribute("user", user);
 			return ("user/user_form");
-		}
+		} catch (NoSuchAlgorithmException e) {
+			session.setAttribute("noSuchAlgorithmException", e.getMessage());
+			session.setAttribute("user", user);
+			return ("user/user_form");
+			}
 		return ("redirect:listUsersRoot");
 	}
 

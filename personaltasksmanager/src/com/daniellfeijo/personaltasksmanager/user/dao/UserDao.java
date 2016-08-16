@@ -1,5 +1,6 @@
 package com.daniellfeijo.personaltasksmanager.user.dao;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 import com.daniellfeijo.personaltasksmanager.user.model.User;
@@ -12,7 +13,7 @@ public interface UserDao {
 	
 	boolean existUser(User user);
 	
-	boolean existEnabledUser(User user);
+	boolean existEnabledUser(User user) throws NoSuchAlgorithmException;
 	
 	User catchByEmail(String email);
 	

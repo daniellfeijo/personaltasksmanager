@@ -1,5 +1,6 @@
 package com.daniellfeijo.personaltasksmanager.user.model;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpSession;
 import com.daniellfeijo.personaltasksmanager.system.exception.ExistEmailException;
 import com.daniellfeijo.personaltasksmanager.system.exception.InvalidUserProfileException;
 import com.daniellfeijo.personaltasksmanager.user.dao.UserDao;
+import com.daniellfeijo.personaltasksmanager.util.security.Encryption;
 import com.daniellfeijo.personaltasksmanager.workgroup.model.WorkGroup;
 
 @Entity
@@ -81,7 +83,7 @@ public class User {
 	}
 	
 
-	public void addUser(UserDao dao) throws ExistEmailException, InvalidUserProfileException{		
+	public void addUser(UserDao dao) throws ExistEmailException, InvalidUserProfileException, NoSuchAlgorithmException{		
 		if (dao.existEmailUser(this)){
 			throw new ExistEmailException("Email already exists!");
 		}
@@ -91,7 +93,7 @@ public class User {
 		}
 
 		this.setEnabled(true);
-		this.setPassword("123");
+		this.setPassword(Encryption.md5("123"));
 		
 		dao.add(this);
 	}	

@@ -28,6 +28,8 @@
 							<input type="email" value="${user.email}" name="email" 
 								class="form-control" id="inputEmail" placeholder="E-mail">
 							<span class="label label-danger">${emailException}</span>
+							<span class="label label-danger">${userProfileException}</span>
+							<span class="label label-danger">${noSuchAlgorithmException}</span>
 						</div>
 			    		<label for="selectProfile" class="col-sm-2 control-label">Profile</label>
 		    			<div class="col-sm-2"><!--
