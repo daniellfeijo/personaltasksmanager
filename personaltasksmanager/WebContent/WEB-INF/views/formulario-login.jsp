@@ -83,11 +83,11 @@
       	<div class="panel panel-default">
         		<div class="panel-heading">
           			<h3 class="panel-title" data-toggle="collapse"
-          				data-target="#information2-1" data-parent="#panels-information2">Work Groups</h3>
+          				data-target="#information2-1" data-parent="#panels-information2">Connections</h3>
         		</div>
         	<div id="information2-1" class="collapse">
           		<div class="panel-body">
-            		<p>The work groups has a owner and a members list.</p>
+            		<p>Your connections are the other users that you can send a task.</p>
           		</div>
         	</div>
       	</div>
