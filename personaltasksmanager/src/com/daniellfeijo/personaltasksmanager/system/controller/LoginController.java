@@ -1,8 +1,11 @@
 package com.daniellfeijo.personaltasksmanager.system.controller;
 
 import java.security.NoSuchAlgorithmException;
+import java.util.Locale;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import javax.servlet.jsp.jstl.core.Config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -27,6 +30,18 @@ public class LoginController {
 	@RequestMapping("main")
 	public String main(){
 		return "main";
+	}
+
+	@RequestMapping("changeLangue")
+	public String changeLangue(HttpServletRequest request){
+		String language = request.getParameter("langue");
+		Locale locale = new Locale(language);
+
+		Config.set(request.getSession(), Config.FMT_LOCALE, locale);
+		Config.set(request.getSession(), Config.FMT_FALLBACK_LOCALE, locale);
+		
+		
+		return "formulario-login";
 	}
 	
 	@Transactional

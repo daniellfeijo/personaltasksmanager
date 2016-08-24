@@ -15,7 +15,8 @@ public class AuthorizerInterceptor extends HandlerInterceptorAdapter{
 		String uri = request.getRequestURI();
 		if(uri.endsWith("loginForm") 
 				|| uri.endsWith("makeLogin") 
-				|| uri.contains("resource")){
+				|| uri.contains("resource")
+				|| uri.contains("changeLangue")){
 			return true;
 		}
 		if(request.getSession().getAttribute("loggedUser") != null){

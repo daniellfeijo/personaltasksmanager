@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,15 +18,24 @@
             <li role="presentation" class="active"><a href="#">Home</a></li>
             <li role="presentation"><a href="#">About</a></li>
             <li role="presentation"><a href="#">Contact</a></li>
-          </ul>
+            <li class="nav-item dropdown">
+               <a href="#" class="nav-link dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-flag"></i> <fmt:message key="menu.language"/></a>
+               <div class="dropdown-menu dropdown-default" aria-labelledby="dropdownMenu1" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                   <ul class="nav nav-pills">
+	                   <li><a class="dropdown-item" href="changeLangue?langue=en"><fmt:message key="menu.english"/></a></li>
+	                   <li><a class="dropdown-item" href="changeLangue?langue=pt"><fmt:message key="menu.portuguese"/></a></li>
+               		</ul>
+               </div>
+           </li>
+                </ul>
+          
         </nav>
         <h3 class="text-muted">PersonalTasksManager.com</h3>
       </div>
 
       <div class="jumbotron">
-        <h1>A powerful tasks manager open source!</h1>
-        <p class="lead">Personal Tasks Manager is open source project of a powerful tasks manager. If you know Java, 
-        	Spring MVC, MySQL, Hibernate, Bootstrap, ... Let's do together! </p>
+        <h1><fmt:message key="Mainjumbotron.title"/></h1>
+        <p class="lead"><fmt:message key="Mainjumbotron.MainMessage"/></p>
         <p><a class="btn btn-lg btn-success" href="https://github.com/daniellfeijo/personaltasksmanager" role="button">Let's do together! See the code!</a></p>
       </div>
 
