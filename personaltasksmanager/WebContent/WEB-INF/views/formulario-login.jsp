@@ -15,9 +15,9 @@
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="#">Home</a></li>
-            <li role="presentation"><a href="#">About</a></li>
-            <li role="presentation"><a href="#">Contact</a></li>
+            <li role="presentation" class="active"><a href="#"><fmt:message key="menu.home"/></a></li>
+            <li role="presentation"><a href="#"><fmt:message key="menu.about"/></a></li>
+            <li role="presentation"><a href="#"><fmt:message key="menu.contact"/></a></li>
             <li class="nav-item dropdown">
                <a href="#" class="nav-link dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-flag"></i> <fmt:message key="menu.language"/></a>
                <div class="dropdown-menu dropdown-default" aria-labelledby="dropdownMenu1" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
@@ -34,9 +34,9 @@
       </div>
 
       <div class="jumbotron">
-        <h1><fmt:message key="Mainjumbotron.title"/></h1>
-        <p class="lead"><fmt:message key="Mainjumbotron.MainMessage"/></p>
-        <p><a class="btn btn-lg btn-success" href="https://github.com/daniellfeijo/personaltasksmanager" role="button">Let's do together! See the code!</a></p>
+        <h1><fmt:message key="mainjumbotron.title"/></h1>
+        <p class="lead"><fmt:message key="mainjumbotron.mainmessage"/></p>
+        <p><a class="btn btn-lg btn-success" href="https://github.com/daniellfeijo/personaltasksmanager" role="button"><fmt:message key="mainjumbotron.btn"/></a></p>
       </div>
 
       <div class="row marketing">
