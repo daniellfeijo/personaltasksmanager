@@ -47,7 +47,7 @@
 						<td>${task.userDestination.email}</td>
 						<td>${task.description}</td>
 						<c:if test="${task.finished eq false}">
-							<td>
+							<td id="task_finish_${task.id}">
 								<a href="#" onClick="finishNow(${task.id})">
 									Finish now!
 								</a>
@@ -80,8 +80,8 @@
 <script src="resources/bootstrap/js/bootstrap.min.js"></script>		
 <script type="text/javascript">
 	function finishNow(id){
-		$.post("finishTask", {'id':id}, function(answer) {
-			$("#task_"+id).html(answer);
+		$.post("finishTask", {'id':id}, function() {
+			$("#task_finish_"+id).html("Finished");
 		});
 	}
 

@@ -2,6 +2,7 @@ package com.daniellfeijo.personaltasksmanager.task.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -64,10 +65,9 @@ public class TaskController {
 	}
 
 	@RequestMapping("finishTask")
-	public String finish(Long id, Model model) {
+	public void finish(Long id, HttpServletResponse response) {
 		dao.finish(id);
-		model.addAttribute("task", dao.findById(id));
-		return "task/finishedTask";
+		response.setStatus(200);
 	}
 
 }
