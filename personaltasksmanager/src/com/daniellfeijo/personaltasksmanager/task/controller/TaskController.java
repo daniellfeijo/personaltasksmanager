@@ -48,7 +48,7 @@ public class TaskController {
 	public String list(Model model) {
 		List<Task> tasks = dao.list();
 		model.addAttribute("tasks", tasks);
-		return "task/task_list";
+		return "task/list/task-list";
 	}
 
 	@RequestMapping("removeTask")
