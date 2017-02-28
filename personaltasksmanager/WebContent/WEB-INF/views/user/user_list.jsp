@@ -6,8 +6,8 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<link rel="stylesheet" type="text/css" href="resources/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="resources/bootstrap/css/dashboard.css">
+	<link rel="stylesheet" type="text/css" href="resources/external/bootstrap-3.3.6-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="resources/external/bootstrap-3.3.6-dist/css/dashboard.css">
 	<link rel="stylesheet" type="text/css" href="resources/css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Personal Tasks Manager</title>
@@ -16,9 +16,9 @@
     <nav class="navbar navbar-default container">
 		<c:import url="../menu/menu_header.jsp"/>
     </nav>
-    
+
     <div class="container-fluid container">
-      <div class="row">            
+      <div class="row">
         <div class="col-sm-12 col-md-12 main">
           <h1 class="page-header">All Users</h1>
           <div class="table-responsive">
@@ -44,7 +44,7 @@
 								<a href="disableUserRoot?id=${user.id}">Disable</a>
 							</td>
 						</c:if>
-			
+
 						<c:if test="${user.enabled eq false}">
 							<td>
 								<a href="enableUserRoot?id=${user.id}">Enable</a>
@@ -58,7 +58,7 @@
         </div>
       </div>
     </div>
-<script src="resources/jquery.js"></script>
-<script src="resources/bootstrap/js/bootstrap.min.js"></script>		
+<script src="resources/jQuery-v1.12.2/jquery.js"></script>
+<script src="resources/external/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 </body>
 </html>
