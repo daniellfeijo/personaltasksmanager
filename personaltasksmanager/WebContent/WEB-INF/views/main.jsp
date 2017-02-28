@@ -15,9 +15,9 @@
     <nav class="navbar navbar-default container">
 		<c:import url="menu/menu_header.jsp"/>
     </nav>
-    
+
     <div class="container-fluid container">
-      <div class="row">   
+      <div class="row">
         <div class="col-sm-12 col-md-12 main">
           <h1 class="page-header">Dashboard</h1>
 
@@ -175,8 +175,8 @@
         </div>
       </div>
     </div>
-	
-<script src="resources/jQuery-v1.12.2/jquery.js"></script>
-<script src="resources/external/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>		
+
+<script src="resources/external/jQuery-v1.12.2/jquery.js"></script>
+<script src="resources/external/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 </body>
 </html>
