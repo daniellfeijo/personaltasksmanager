@@ -10,8 +10,11 @@
     <link rel="stylesheet" type="text/css" href="resources/external/bootstrap-3.3.6-dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="resources/external/bootstrap-3.3.6-dist/css/dashboard.css">
     <link rel="stylesheet" type="text/css" href="resources/css/style.css">
-    <script src="resources/task/list/js/task-list.min.js"></script>
-
+    <!-- build:js -->
+    <script src="resources/task/list/js/task-list.js" type="text/javascript"></script>
+    <script src="resources/external/jQuery-v1.12.2/jquery.js"></script>
+    <script src="resources/external/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+    <!-- endbuild -->
 	<title>Personal Tasks Manager</title>
 </head>
 <body>

@@ -15,11 +15,11 @@
 </head>
 <body>
     <nav class="navbar navbar-default container">
-		<c:import url="../menu/menu_header.jsp"/>
+		<c:import url="../../menu/menu_header.jsp"/>
     </nav>
-    
+
     <div class="container-fluid container">
-      <div class="row">            
+      <div class="row">
         <div class="col-sm-12 col-md-12 main">
           <h1 class="page-header">Add Task</h1>
 					<form action="addTask" method="post" class="form-horizontal">
@@ -39,7 +39,7 @@
 			          <option>Low</option>
 			        </select>
 			    </div>
-			  
+
 			    <label for="inputPassword3" class="col-sm-2 control-label">Group</label>
 			    <div class="col-sm-2">
 			      <input type="password" name="password" class="form-control" id="inputPassword3" placeholder="Password">
@@ -48,7 +48,7 @@
 			    <div class="col-sm-2">
 			      <input type="password" name="password" class="form-control" id="inputPassword3" placeholder="Password">
 			    </div>
-			    
+
 			  </div>
 			  <div class="form-group">
 			    <label for="inputPassword3" class="col-sm-3 control-label">Projeto</label>
@@ -76,6 +76,6 @@
       </div>
     </div>
 <script src="resources/external/jQuery-v1.12.2/jquery.js"></script>
-<script src="resources/external/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>		
+<script src="resources/external/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 </body>
 </html>

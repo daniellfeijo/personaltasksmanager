@@ -25,14 +25,14 @@ public class TaskController {
 
 	@RequestMapping("newTask")
 	public String form() {
-		return ("task/task_form");
+		return ("task/add/task_form");
 	}
 
 	@RequestMapping("addTask")
 	public String add(@Valid Task task, BindingResult result,
 			HttpSession session) {
 		if (result.hasErrors()) {
-			return "task/task_form";
+			return "task/add/task_form";
 		}
 		task.addTask(dao, session);
 		return ("redirect:listTasks");
@@ -61,7 +61,7 @@ public class TaskController {
 	@RequestMapping("showTask")
 	public String show(Long id, Model model) {
 		model.addAttribute("task", dao.findById(id));
-		return "task/task_show";
+		return "task/edit/task_show";
 	}
 
 	@RequestMapping("finishTask")
