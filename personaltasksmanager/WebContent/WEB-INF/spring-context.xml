@@ -13,7 +13,7 @@
 						http://www.springframework.org/schema/aop
 						http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
 
-	<context:component-scan base-package="com.daniellfeijo.personaltasksmanager" />
+	<context:component-scan base-package="main.com.daniellfeijo.personaltasksmanager" />
 	<mvc:annotation-driven />
 	
 	<bean id="mysqlDataSource" class="org.apache.commons.dbcp.BasicDataSource">
@@ -53,7 +53,7 @@
 
 
 	<mvc:interceptors>
-		<bean class="com.daniellfeijo.personaltasksmanager.util.interceptor.AuthorizerInterceptor" />
+		<bean class="main.com.daniellfeijo.personaltasksmanager.util.interceptor.AuthorizerInterceptor" />
 	</mvc:interceptors>
 	
 
